@@ -11,4 +11,4 @@ Router.plugin('ensureSignedIn', {
   only: ['dashboard']
 });
 
-Router.route('/profile', { name: 'profile' });
+Router.route('/profile', { name: 'Profile' });
