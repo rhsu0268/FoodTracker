@@ -12,3 +12,9 @@ Router.plugin('ensureSignedIn', {
 });
 
 Router.route('/profile', { name: 'Profile' });
+
+Router.route('/calorieCounter', { name: 'CalorieCounter' });
+
+Router.route('/dietOptions', { name: 'DietOptions' });
+
+Router.route('/foodRecalls', { name: 'FoodRecalls' });
