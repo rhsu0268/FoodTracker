@@ -1,6 +1,6 @@
 Template.Profile.rendered = function()
 {
-    console.log(Meteor.users.findOne());
+    //console.log(Meteor.users.findOne());
     var profileInfo = Meteor.users.findOne().profile;
     $('#userName').text("Name: " + profileInfo.userName);
     $('#userAge').text("Age: " + profileInfo.userAge);
