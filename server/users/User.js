@@ -10,17 +10,22 @@ Meteor.methods({
         });
         console.log(userId);
 
+        var userId = userUpdate.userId;
+        console.log(userId);
         var userName = userUpdate.userName;
         var userAge = userUpdate.userAge;
-        var userHeight = userUpdate.userheight;
+        var userHeight = userUpdate.userHeight;
         var userWeight = userUpdate.userWeight;
 
         var updatedUser = Meteor.users.update(userId, {$set: {
 
-            userName: userName,
-            userAge: userAge,
-            userHeight: userHeight,
-            userWeight: userWeight
+            profile:
+            {
+                userName: userName,
+                userAge: userAge,
+                userHeight: userHeight,
+                userWeight: userWeight
+            }
         }
     });
 

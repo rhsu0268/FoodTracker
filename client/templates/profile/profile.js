@@ -1,3 +1,9 @@
+Template.Profile.rendered({
+    console.log(Meteor.users.findOne());
+
+});
+
+
 Template.Profile.events({
 
     'click #submitChange': function(event)
@@ -36,7 +42,7 @@ Template.Profile.events({
             console.log("Profile updated!");
 
         });
-        
+
 
     }
 });
