@@ -1,8 +1,12 @@
-Template.Profile.rendered({
+Template.Profile.rendered = function()
+{
     console.log(Meteor.users.findOne());
-
-});
-
+    var profileInfo = Meteor.users.findOne().profile;
+    $('#userName').text("Name: " + profileInfo.userName);
+    $('#userAge').text("Age: " + profileInfo.userAge);
+    $('#userHeight').text("Height: " + profileInfo.userHeight);
+    $('#userWeight').text("Weight: " + profileInfo.userWeight);
+}
 
 Template.Profile.events({
 
@@ -42,6 +46,8 @@ Template.Profile.events({
             console.log("Profile updated!");
 
         });
+
+        Router.go("Profile");
 
 
     }
